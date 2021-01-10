@@ -11,10 +11,13 @@ body {
 
   font-family: Montserrat, sans-serif;
   letter-spacing: -0.015em;
+  font-size: 18px;
+  line-height: 1.67;
 }
 
 .list {
   list-style: none;
+  text-decoration: none;
 }
 
 /* цвет основного текста rgba(0, 0, 0, 0.8) */
@@ -30,6 +33,7 @@ body {
   font-family: Comfortaa, cursive;
   font-size: 28px;
   line-height: 1.14;
+  text-decoration: none;
 }
 
 .logo:hover,
@@ -44,6 +48,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
+  text-decoration: none;
 }
 
 .site-nav .link:hover,
