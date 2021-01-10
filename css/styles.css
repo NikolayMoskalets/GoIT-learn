@@ -1,6 +1,11 @@
 /* Hero */
 .hero-title {
   color: var(--title-text-color);
+
+  font-weight: 400;
+  font-size: 56;
+  line-height: 1.43;
+  text-align: center;
 }
 
 /* Section */
@@ -22,6 +27,10 @@
 .button {
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 
 .button.primary {
