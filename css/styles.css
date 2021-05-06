@@ -1,19 +1,15 @@
+/* цвет основного текста #000000 */
+/* вторичный цвет текста  rgba(0, 0, 0, 0.8); */
+/* белый #FFFFFF  */
+/* акцент #18A0FB */
+/* вторичный цвет фона #F5F5F5; */
+
 :root {
   --primary-text-color: rgba(0, 0, 0, 0.8);
   --title-text-color: #000000;
   --accent-color: #18a0fb;
   --primary-white-color: #ffffff;
   --secondary-bg-color: #f5f5f5;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 body {
@@ -26,45 +22,53 @@ body {
   line-height: 1.67;
 }
 
-.list {
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   margin-left: auto;
   margin-right: auto;
+  width: 1440px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 1440px;
   outline: 2px solid tomato;
 }
 
-/* цвет основного текста rgba(0, 0, 0, 0.8) */
-/* вторичный цвет текста #000000 */
-/* белый #FFFFFF */
-/* акцент #18A0FB */
-/* вторичный цвет фона #F5F5F5 */
-
 /* Logo */
+
 .logo {
   color: var(--title-text-color);
-
   font-family: Comfortaa, cursive;
+
   font-size: 28px;
   line-height: 1.14;
   text-decoration: none;
 }
 
-.logo:hover,
-.logo:focus {
+.logo:hover {
   color: var(--accent-color);
 }
 
-/* Site-nav */
+/* Page header */
+
+.page-header {
+}
+
+/* Site nav */
+
+.site-nav {
+  display: flex;
+}
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
   color: var(--accent-color);
 
   font-weight: 500;
@@ -82,6 +86,20 @@ body {
   color: var(--title-text-color);
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.auth-nav {
+  display: flex;
+}
+
+.auth-nav .item + .item {
+  margin-left: 10px;
+}
+
 /* Hero */
 
 .hero {
@@ -89,11 +107,10 @@ body {
 }
 
 .hero-title {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 40px;
 
   color: var(--title-text-color);
-
   font-weight: 400;
   font-size: 56px;
   line-height: 1.43;
@@ -104,10 +121,6 @@ body {
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1600px;
-  outline: 2px solid teal;
 }
 
 .section.no-padding {
@@ -116,12 +129,17 @@ body {
 }
 
 .section-title {
-  color: var(--title-text-color);
   margin-top: 0;
   margin-bottom: 60px;
+
+  color: var(--title-text-color);
+
   font-weight: 400;
   font-size: 48px;
   line-height: 1.5;
+}
+
+.section-title.centered {
   text-align: center;
 }
 
@@ -132,7 +150,8 @@ body {
   line-height: 1.39;
 }
 
-/* Features and Examples*/
+/* Features и Examples */
+
 .feature-list .title,
 .work-list .title {
   margin-top: 0;
@@ -144,12 +163,7 @@ body {
   line-height: 1.5;
 }
 
-.feature-list .text {
-  margin-top: 0;
-  margin-bottom: 32px;
-  font-size: 18px;
-  line-height: 1.67;
-}
+/* Works */
 
 .work-list > .item {
   padding-top: 80px;
@@ -161,21 +175,28 @@ body {
   background-color: var(--secondary-bg-color);
 }
 
-/* Buttons */
+.feature-list p {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Button */
+
 .button {
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 6px;
   padding: 11px 34px;
   min-width: 130px;
+
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
 
   font-weight: 500;
   font-size: 15px;
   line-height: 1.2;
-  text-align: center;
   text-decoration: none;
+  text-align: center;
 }
 
 .button.primary {
@@ -184,9 +205,10 @@ body {
 }
 
 .button.secondary {
+  border-color: var(--accent-color);
+
   color: var(--accent-color);
   background-color: var(--primary-white-color);
-  border-color: var(--accent-color);
 }
 
 /* Footer */
