@@ -45,7 +45,25 @@ body {
   background-color: teal;
 }
 
+/* Лучший вариант */
+
 .flex-element {
+  background-color: tomato;
+  width: calc((100% - 60px) / 3);
+  /*_calc((100%_-_количество марджинов в строке х значение марджина)_/_количество элементов в строке) */
+}
+
+.flex-element:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.flex-element:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* Альтернатива 1 */
+
+/* .flex-element {
   width: 380px;
   background-color: tomato;
   margin-right: 30px;
@@ -56,19 +74,37 @@ body {
   margin-right: 0px;
 }
 
-.flex-element:nth-last-child(-n + 3) {
+.flex-element:nth-last-child(-n_+_3) {
   margin-bottom: 0px;
-}
+} */
 
-/* или */
-/* Предварительно убрать соотв. марджины из .flex-element и задать их следующим ниже селекторам*/
+/* Альтернатива 2 */
+
+/* .flex-element {
+  width: 380px;
+  background-color: tomato;
+} */
 
 /* .flex-element:not(:nth-child(3n)) {
   margin-right: 30px;
 } */
 
-/* .flex-element:not(:nth-last-child(-n + 3)) {
+/* .flex-element:not(:nth-last-child(-n_+_3)) {
   margin-bottom: 30px;
+} */
+
+/* Альтернатива 3 - если НЕ нужен ФОН */
+/* .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: teal;
+  margin: -15px;
+} */
+
+/* .flex-element {
+  width: 380px;
+  background-color: tomato;
+  margin: 15px;
 } */
 
 /* КОНЕЦ */
@@ -207,9 +243,13 @@ body {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
+  margin: -40px -75px;
 }
 
 .feature-list .item {
+  width: 625px;
+  margin: 40px 75px;
+  background-color: tomato;
 }
 
 .feature-list .title,
