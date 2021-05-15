@@ -292,6 +292,25 @@ body {
   margin-right: 84px;
 }
 
+/* Сlients */
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1020px;
+  margin: -30px -40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-list li {
+  margin: 30px 40px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+}
+
 /* Button */
 
 .button {
