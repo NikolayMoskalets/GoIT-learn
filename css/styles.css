@@ -233,8 +233,8 @@ body {
 }
 
 .section-description {
-  margin-top: 0;
-  margin-bottom: 80px;
+  /* margin-top: 0; */
+  /*  margin-bottom: 80px */
   font-size: 36px;
   line-height: 1.39;
 }
